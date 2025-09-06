@@ -1,3 +1,2 @@
 AppointmentID,PatientID,PatientName,Doctor,Date,StartTime,EndTime,Duration,InsuranceCarrier,MemberID,GroupNumber,ConfirmationStatus,RemindersSent,FormSent
-1,50,Jagadesh reddy Chilla,Dr. Kumar,2025-09-06,15:00,16:00,60,Blue Cross,XYZ789,GRP456,Pending,0,False
-2,50,Jagadesh reddy Chilla,Dr. Kumar,2025-09-06,12:00,12:30,30,Blue Cross,XYZ789,GRP456,Pending,0,False
+1,50,Jagadesh reddy Chilla,Dr. Kumar,2025-09-06,9:00,10:00,60,Blue Cross,XYZ789,GRP456,Pending,0,False

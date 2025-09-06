@@ -116,14 +116,6 @@ def show_agent_info_page():
     - **Dr. Brown** - Orthopedics
     """)
     
-    st.markdown("### 📍 Locations")
-    st.markdown("""
-    - **Chicago** - Main Office
-    - **New York** - Branch Office
-    - **Los Angeles** - West Coast Office
-    - **Houston** - Texas Office
-    """)
-    
     st.markdown("### ⏰ Operating Hours")
     st.markdown("""
     - **Monday - Friday**: 8:00 AM - 6:00 PM
