@@ -29,6 +29,7 @@ Experience the Medical Appointment Scheduling Agent in action! Click the link ab
 ## 📋 Table of Contents
 
 - [🎯 Project Overview](#-project-overview)
+- [🔧 Technical Requirements](#-technical-requirements)
 - [✨ Key Features](#-key-features)
 - [🏗️ System Architecture](#️-system-architecture)
 - [🔄 Workflow Process](#-workflow-process)
@@ -43,7 +44,16 @@ Experience the Medical Appointment Scheduling Agent in action! Click the link ab
 
 ## 🎯 Project Overview
 
-The **Medical Office Appointment Scheduling Agent** is an advanced AI-powered chatbot that revolutionizes how medical offices handle patient interactions. Built with cutting-edge conversational AI technology, it provides seamless appointment scheduling, patient information collection, and comprehensive office management capabilities.
+Build a medical appointment scheduling AI agent that automates patient booking, reduces no-shows, and streamlines clinic operations. This mirrors real-world challenges in healthcare technology.
+
+### 💼 Business Problem
+
+Medical practices lose **20-50% revenue** due to no-shows, missed insurance collection, and scheduling inefficiencies. This AI agent solves these critical operational pain points by:
+
+- **Reducing No-Shows**: Automated reminders and confirmations
+- **Streamlining Insurance Collection**: Automated verification and data capture
+- **Optimizing Scheduling**: Smart appointment allocation and conflict resolution
+- **Improving Patient Experience**: 24/7 availability and instant responses
 
 ### 🎪 What Makes It Special
 
@@ -52,6 +62,23 @@ The **Medical Office Appointment Scheduling Agent** is an advanced AI-powered ch
 - **Edge Case Handling**: Robust management of complex scenarios and exceptions
 - **Real-time Integration**: Live calendar synchronization and instant notifications
 - **Scalable Design**: Built to handle high-volume medical office operations
+
+---
+
+## 🔧 Technical Requirements
+
+### 🎯 Core Features to Implement (MVP-1)
+
+| Feature | Description | Technical Challenge |
+|---------|-------------|-------------------|
+| **Patient Greeting** | Collect name, DOB, doctor, location | Data validation & NLP |
+| **Patient Lookup** | Search EMR, detect new vs returning. Use any DB of choice. Feel free to generate synthetic data of your choice here with 50 patients | Database integration |
+| **Smart Scheduling** | 60min (new patient) vs 30min (returning patient) | Business logic implementation |
+| **Calendar Integration** | Show available slots. Calendy tool integration | File/API management |
+| **Insurance Collection** | Capture carrier, member ID, group | Data structuring |
+| **Appointment Confirmation** | Export to Excel, send confirmations | File operations & messaging |
+| **Form Distribution** | Email patient intake forms. This will only be sent after the appointment is confirmed. Attached are the sample forms in the case-study | Integration & automation |
+| **Reminder System** | 3 automated reminders with confirmations on their email and SMS. 1st reminder should be regular, while 2nd and 3rd reminder should have actions:<br/>1) Have they filled the forms?<br/>2) If their visit is confirmed or not? If not, please mention the reason for cancellation? | Scheduling & tracking |
 
 ---
 
