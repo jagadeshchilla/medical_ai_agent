@@ -6,12 +6,19 @@
 
 *AI-powered medical assistant streamlining healthcare appointments*
 
+## 🌐 **Live Application**
+
+**🚀 [Try the Live App Now](https://medicalschedulingagent.streamlit.app)**
+
+Experience the Medical Appointment Scheduling Agent in action! Click the link above to interact with our AI-powered medical assistant and see how it streamlines appointment scheduling and patient management.
+
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-1.32.0-red.svg)
 ![LangChain](https://img.shields.io/badge/LangChain-0.1.9-green.svg)
 ![Pandas](https://img.shields.io/badge/Pandas-2.2.0-orange.svg)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-brightgreen.svg)
 ![AI](https://img.shields.io/badge/AI-Powered-purple.svg)
+[![Live App](https://img.shields.io/badge/Live%20App-Streamlit%20Cloud-blue)](https://medicalschedulingagent.streamlit.app)
 
 *A sophisticated conversational AI assistant designed to streamline medical office operations through intelligent appointment scheduling and patient management.*
 
@@ -222,7 +229,8 @@ flowchart TD
    ```
 
 6. **Access the Application**
-   - Open your browser to `http://localhost:8501`
+   - **Live App**: Visit [https://medicalschedulingagent.streamlit.app](https://medicalschedulingagent.streamlit.app) to use the deployed version
+   - **Local Development**: Open your browser to `http://localhost:8501` for local development
    - Start interacting with the Medical Appointment Scheduling Agent
 
 ---

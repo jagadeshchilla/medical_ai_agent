@@ -317,12 +317,12 @@ class EmailService:
                 <p>Please confirm your appointment by clicking one of the buttons below:</p>
                 
                 <div style="margin: 20px 0; text-align: center;">
-                    <a href="http://localhost:8501/confirm?appointment_id={appointment_id}&action=confirm" 
+                    <a href="https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=confirm" 
                        style="background-color: #28a745; color: white; padding: 12px 24px; text-decoration: none; 
                               border-radius: 5px; margin: 10px; display: inline-block; font-weight: bold;">
                         ✅ CONFIRM APPOINTMENT
                     </a>
-                    <a href="http://localhost:8501/confirm?appointment_id={appointment_id}&action=cancel" 
+                    <a href="https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=cancel" 
                        style="background-color: #dc3545; color: white; padding: 12px 24px; text-decoration: none; 
                               border-radius: 5px; margin: 10px; display: inline-block; font-weight: bold;">
                         ❌ CANCEL APPOINTMENT
@@ -342,8 +342,8 @@ class EmailService:
             content += "IMPORTANT: Please complete the attached New Patient Intake Form if you haven't already done so. "
             content += "This form contains important information about your medical history and current health status.\n\n"
             content += "Please confirm your appointment by clicking one of the links below:\n\n"
-            content += f"✅ CONFIRM APPOINTMENT: http://localhost:8501/confirm?appointment_id={appointment_id}&action=confirm\n\n"
-            content += f"❌ CANCEL APPOINTMENT: http://localhost:8501/confirm?appointment_id={appointment_id}&action=cancel\n\n"
+            content += f"✅ CONFIRM APPOINTMENT: https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=confirm\n\n"
+            content += f"❌ CANCEL APPOINTMENT: https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=cancel\n\n"
             content += "If you need to reschedule, please contact us at least 24 hours in advance.\n\n"
             content += "Thank you,\nMedical Office Staff"
             
@@ -362,12 +362,12 @@ class EmailService:
                 <p><strong>URGENT:</strong> Please confirm your attendance by clicking one of the buttons below:</p>
                 
                 <div style="margin: 20px 0; text-align: center;">
-                    <a href="http://localhost:8501/confirm?appointment_id={appointment_id}&action=confirm" 
+                    <a href="https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=confirm" 
                        style="background-color: #28a745; color: white; padding: 12px 24px; text-decoration: none; 
                               border-radius: 5px; margin: 10px; display: inline-block; font-weight: bold;">
                         ✅ CONFIRM APPOINTMENT
                     </a>
-                    <a href="http://localhost:8501/confirm?appointment_id={appointment_id}&action=cancel" 
+                    <a href="https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=cancel" 
                        style="background-color: #dc3545; color: white; padding: 12px 24px; text-decoration: none; 
                               border-radius: 5px; margin: 10px; display: inline-block; font-weight: bold;">
                         ❌ CANCEL APPOINTMENT
@@ -387,8 +387,8 @@ class EmailService:
             content = f"Dear {patient_name},\n\n"
             content += f"This is your final reminder about your appointment with Dr. {doctor} on {appointment_date} at {appointment_time}.\n\n"
             content += "URGENT: Please confirm your attendance by clicking one of the links below:\n\n"
-            content += f"✅ CONFIRM APPOINTMENT: http://localhost:8501/confirm?appointment_id={appointment_id}&action=confirm\n\n"
-            content += f"❌ CANCEL APPOINTMENT: http://localhost:8501/confirm?appointment_id={appointment_id}&action=cancel\n\n"
+            content += f"✅ CONFIRM APPOINTMENT: https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=confirm\n\n"
+            content += f"❌ CANCEL APPOINTMENT: https://medicalschedulingagent.streamlit.app/confirm?appointment_id={appointment_id}&action=cancel\n\n"
             content += "If you haven't completed your intake forms yet, please do so immediately and bring them to your appointment.\n\n"
             content += "Please arrive 15 minutes early for your appointment.\n\n"
             content += "Thank you,\nMedical Office Staff"
