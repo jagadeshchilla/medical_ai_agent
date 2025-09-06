@@ -74,11 +74,39 @@ Medical practices lose **20-50% revenue** due to no-shows, missed insurance coll
 | **Patient Greeting** | Collect name, DOB, doctor, location | Data validation & NLP |
 | **Patient Lookup** | Search EMR, detect new vs returning. Use any DB of choice. Feel free to generate synthetic data of your choice here with 50 patients | Database integration |
 | **Smart Scheduling** | 60min (new patient) vs 30min (returning patient) | Business logic implementation |
-| **Calendar Integration** | Show available slots. Calendy tool integration | File/API management |
+| **Calendar Integration** | Show available slots. Calendly simulation via Excel file operations | File operations & Excel management |
 | **Insurance Collection** | Capture carrier, member ID, group | Data structuring |
 | **Appointment Confirmation** | Export to Excel, send confirmations | File operations & messaging |
 | **Form Distribution** | Email patient intake forms. This will only be sent after the appointment is confirmed. Attached are the sample forms in the case-study | Integration & automation |
 | **Reminder System** | 3 automated reminders with confirmations on their email and SMS. 1st reminder should be regular, while 2nd and 3rd reminder should have actions:<br/>1) Have they filled the forms?<br/>2) If their visit is confirmed or not? If not, please mention the reason for cancellation? | Scheduling & tracking |
+
+### 📅 **Calendar Integration Simulation**
+
+Since this is a case study project, we simulate Calendly functionality using Excel file operations instead of actual API integration:
+
+#### 🗂️ **How the Simulation Works**
+
+**Doctor Schedules in Excel**
+- Excel sheet with each doctor's availability
+- Columns: `Doctor Name | Date | Available Time Slots`
+- Pre-populated with available appointment slots
+
+**AI Booking Process**
+1. **Check Availability**: Program reads Excel to find available slots
+2. **Slot Selection**: If slot is open → mark as booked
+3. **Alternative Suggestions**: If not available → suggest other open slots
+4. **Update Excel**: Write confirmed booking back to Excel
+
+**Booking Confirmation Storage**
+- Separate sheet or section for confirmed appointments
+- Columns: `Patient Name | DOB | Doctor | Date | Time | Status`
+- Acts as the "Calendly calendar" for the system
+
+#### 🎯 **Result**
+- Excel file functions as the calendar system
+- All bookings stored for admin review and export
+- Simulates real-world calendar integration without API complexity
+- Agent reads Excel (availability) → writes back to Excel (confirmations)
 
 ---
 
@@ -95,9 +123,11 @@ Medical practices lose **20-50% revenue** due to no-shows, missed insurance coll
 - **Information Collection**: Structured data gathering for medical records
 
 ### 📅 **Advanced Scheduling System**
-- **Real-Time Availability**: Live calendar integration with instant slot checking
+- **Excel-Based Calendar**: Simulated calendar integration using Excel file operations
+- **Real-Time Availability**: Instant slot checking from Excel availability data
 - **Doctor-Specific Scheduling**: Assigns appointments based on doctor availability and specialization
 - **Alternative Suggestions**: Intelligent recommendations when preferred slots are unavailable
+- **Booking Persistence**: All confirmed appointments stored in Excel for admin review
 
 ### 🛡️ **Insurance & Verification**
 - **Insurance Validation**: Automated insurance information verification
@@ -130,15 +160,15 @@ graph TB
     
     I[Admin Interface] --> J[Admin Agent]
     
-    K[Calendar Service] --> D
+    K[Excel Calendar Service] --> D
     L[Email Service] --> F
     L --> G
     L --> H
     M[Confirmation Service] --> F
     
     N[Data Layer] --> O[Patient Records]
-    N --> P[Appointment Data]
-    N --> Q[Doctor Availability]
+    N --> P[Excel Appointment Data]
+    N --> Q[Excel Doctor Availability]
 ```
 
 ### 🧩 **Multi-Agent Architecture**
@@ -147,7 +177,7 @@ graph TB
 |-------|---------------|--------------|
 | **Patient Interaction** | Initial greeting and conversation flow | Context management, natural language processing |
 | **Patient Lookup** | Patient verification and record retrieval | Database queries, new patient handling |
-| **Scheduling** | Appointment booking and calendar management | Real-time availability, conflict resolution |
+| **Scheduling** | Appointment booking and Excel calendar management | Excel-based availability, conflict resolution |
 | **Insurance** | Insurance verification and coverage checking | Policy validation, cost estimation |
 | **Confirmation** | Appointment confirmation and details | Automated confirmations, change management |
 | **Form Distribution** | Digital form sending and tracking | PDF generation, completion monitoring |
@@ -281,14 +311,14 @@ RagAI/
 │   └── admin_agent.py                # Administrative functions
 │
 ├── 🔧 services/                      # Service Modules
-│   ├── calendar_service.py           # Calendar integration
+│   ├── calendar_service.py           # Excel-based calendar simulation
 │   ├── confirmation_service.py       # Confirmation logic
 │   └── email_service.py              # Email notifications
 │
 ├── 📊 data/                          # Data Files
 │   ├── patients.csv                  # Patient records
 │   ├── doctor_appointments.csv       # Appointment data
-│   ├── availability.csv              # Doctor availability
+│   ├── availability.csv              # Doctor availability (Excel simulation)
 │   └── New Patient Intake Form.pdf   # Digital forms
 │
 ├── 🛠️ utils/                         # Utility Modules
